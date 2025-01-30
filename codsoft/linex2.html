@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .header .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            padding: 3rem 1rem;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+        }
+
+        .hero button {
+            background: white;
+            color: #ff758c;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .about,
+        .services {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .about h2,
+        .services h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Landing Page</h1>
+            <nav class="navbar">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Creative Digital Agency</h2>
+            <p>We build modern and user-friendly websites for businesses worldwide.</p>
+            <button>Learn More</button>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>With over 15 years of experience, we deliver top-notch results for our clients.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>User Experience</h3>
+                    <p>Creating seamless and engaging experiences for users.</p>
+                </div>
+                <div class="card">
+                    <h3>Creative Design</h3>
+                    <p>Designs that captivate and communicate your brand effectively.</p>
+                </div>
+                <div class="card">
+                    <h3>Retina Ready</h3>
+                    <p>Optimized for modern, high-resolution screens.</p>
+                </div>
+            </div>

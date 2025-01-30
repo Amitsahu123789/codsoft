@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Sahu - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            min-height: 120px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #C8E6C9;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project {
+            background: #E8F5E9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 0px;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 12px;
+            right: 30px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50%;
+            font-size: 18px;
+            display: none;
+            cursor: pointer;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #2E7D32;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Amit Sahu</h1>
+        <p>Full Stack Developer | AI & ML Enthusiast</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate full-stack developer with experience in frontend and backend technologies, including
+            JavaScript, Flask, and MySQL.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Spotify Clone</h3>
+            <p>A clone of the Spotify UI using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project">
+            <h3>Crop Prediction Model</h3>
+            <p>Built a machine learning model for crop prediction using weather data.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>C++ | JavaScript | Python | Java</li>
+            <li>Flask | MySQL | GitHub</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:amitsahustudent78@gmail.com">amitsahustudent78@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/yourgithub">github.com/yourgithub</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Amit Sahu. All Rights Reserved.</p>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            alert("Welcome to Amit Sahu's Portfolio!");
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+
+
+        let darkMode = false;
+        const toggleDarkMode = () => {
+            document.body.classList.toggle('dark-mode');
+            darkMode = !darkMode;
+        };
+
+        window.onscroll = function () {
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
